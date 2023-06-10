@@ -27,12 +27,13 @@ namespace PRT_Assignment_1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int NumbertoFind = GetTheNumber("What is the Number you are Looking for? ", lowerNum, MaxNum);
+            int NumbertoFind = int.Parse(txtNumToFind.Text);
+            method.GetTheNumber(NumbertoFind, lowerNum, MaxNum);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //vs
+            
         }
 
     }

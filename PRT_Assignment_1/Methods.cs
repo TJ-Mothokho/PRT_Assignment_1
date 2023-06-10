@@ -28,7 +28,7 @@ namespace PRT_Assignment_1
             return arrayNumber;
         }
 
-        static int GetTheNumber(string prompt, int lower, int maxNum)
+        public int GetTheNumber(string NumbertoFind, int lower, int maxNum)
         {
 
             int Num = 0;
