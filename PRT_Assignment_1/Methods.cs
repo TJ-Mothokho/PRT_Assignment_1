@@ -55,5 +55,21 @@ namespace PRT_Assignment_1
             }
             return message;
         }
+
+        public int LinearSearch(int[] arrayNumber, string numToFind) //Linear Search Algorithm
+        {
+            int numberToFind = int.Parse(numToFind);
+            int indexFound = -1;
+            for (int i = 0; i < arrayNumber.Length; i++)
+            {
+                if (numberToFind == arrayNumber[i])
+                {
+                    indexFound = i;//sets indexfound to whatever index number the value was in
+                    i = arrayNumber.Length;// setting i to the max value so we can leave the loop
+                }
+            }
+
+            return indexFound;
+        }
     }
 }

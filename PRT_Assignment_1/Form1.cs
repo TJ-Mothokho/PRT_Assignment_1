@@ -35,15 +35,39 @@ namespace PRT_Assignment_1
             {
                 if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
                 {
-
+                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
                 {
-
+                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
                 {
-
+                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
                 }
             }
 
