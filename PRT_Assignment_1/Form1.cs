@@ -14,6 +14,7 @@ namespace PRT_Assignment_1
     {
         Methods method = new Methods();
         int lowerNum = 1, maxNum = 102;
+        
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace PRT_Assignment_1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            int[] array = method.Read();
             lblErrorMsg.Text = method.GetTheNumber(txtNumToFind.Text, lowerNum, maxNum);
             
         }
@@ -40,6 +41,7 @@ namespace PRT_Assignment_1
         private void Form1_Load(object sender, EventArgs e)
         {
             lblErrorMsg.Text = "";
+
         }
 
     }
