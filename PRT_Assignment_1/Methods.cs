@@ -28,35 +28,32 @@ namespace PRT_Assignment_1
             return arrayNumber;
         }
 
-        public int GetTheNumber(string NumbertoFind, int lower, int maxNum)
+        public string GetTheNumber(string numToFind, int lowerNum, int maxNum)
         {
-
-            int Num = 0;
-            bool valid;
-
-            do
+            bool valid = true;
+            string message="";
+            try
             {
-                try
-                {
-                    valid = true;
-                    Console.Write(prompt);
-                    Num = int.Parse(Console.ReadLine());
 
-                    if (Num < lower || Num > maxNum)
-                    {
-                        Console.WriteLine("Invalid number entered. Number should be between {0} and {1}", lower, maxNum);
-                        valid = false;
-                    }
-                }
-                catch (System.FormatException ex)
+                int NumbertoFind = int.Parse(numToFind);
+
+                int num = int.Parse(numToFind);
+                //Console.Write(prompt);
+                //Num = int.Parse(Console.ReadLine());
+
+                if (num < lowerNum || num > maxNum)
                 {
-                    Console.WriteLine("Wrong number entered. Please enter numerical data");
+                    message = $"Invalid number entered. Number should be between {lowerNum} and {maxNum}";
+                    //Console.WriteLine("Invalid number entered. Number should be between {0} and {1}", lower, maxNum);
                     valid = false;
                 }
-
-            } while (valid == false);
-            return Num;
-
+            }
+            catch (System.FormatException ex)
+            {
+                message = "Wrong number entered. Please enter numerical value";
+                valid = false;
+            }
+            return message;
         }
     }
 }

@@ -34,15 +34,15 @@
             this.rdoBinarySearch = new System.Windows.Forms.RadioButton();
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdoBubbleSort = new System.Windows.Forms.RadioButton();
-            this.rdoInsertionSort = new System.Windows.Forms.RadioButton();
             this.rdoQuickSort = new System.Windows.Forms.RadioButton();
+            this.rdoInsertionSort = new System.Windows.Forms.RadioButton();
+            this.rdoBubbleSort = new System.Windows.Forms.RadioButton();
             this.lblPrompt = new System.Windows.Forms.Label();
             this.txtNumToFind = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lstDisplay = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrorMsg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grb1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -125,16 +125,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Which Sort Algorithm do you want to use?";
             // 
-            // rdoBubbleSort
+            // rdoQuickSort
             // 
-            this.rdoBubbleSort.AutoSize = true;
-            this.rdoBubbleSort.Location = new System.Drawing.Point(26, 37);
-            this.rdoBubbleSort.Name = "rdoBubbleSort";
-            this.rdoBubbleSort.Size = new System.Drawing.Size(116, 25);
-            this.rdoBubbleSort.TabIndex = 0;
-            this.rdoBubbleSort.TabStop = true;
-            this.rdoBubbleSort.Text = "Bubble Sort";
-            this.rdoBubbleSort.UseVisualStyleBackColor = true;
+            this.rdoQuickSort.AutoSize = true;
+            this.rdoQuickSort.Location = new System.Drawing.Point(868, 37);
+            this.rdoQuickSort.Name = "rdoQuickSort";
+            this.rdoQuickSort.Size = new System.Drawing.Size(107, 25);
+            this.rdoQuickSort.TabIndex = 2;
+            this.rdoQuickSort.TabStop = true;
+            this.rdoQuickSort.Text = "Quick Sort";
+            this.rdoQuickSort.UseVisualStyleBackColor = true;
             // 
             // rdoInsertionSort
             // 
@@ -147,16 +147,16 @@
             this.rdoInsertionSort.Text = "Insertion Sort";
             this.rdoInsertionSort.UseVisualStyleBackColor = true;
             // 
-            // rdoQuickSort
+            // rdoBubbleSort
             // 
-            this.rdoQuickSort.AutoSize = true;
-            this.rdoQuickSort.Location = new System.Drawing.Point(868, 37);
-            this.rdoQuickSort.Name = "rdoQuickSort";
-            this.rdoQuickSort.Size = new System.Drawing.Size(107, 25);
-            this.rdoQuickSort.TabIndex = 2;
-            this.rdoQuickSort.TabStop = true;
-            this.rdoQuickSort.Text = "Quick Sort";
-            this.rdoQuickSort.UseVisualStyleBackColor = true;
+            this.rdoBubbleSort.AutoSize = true;
+            this.rdoBubbleSort.Location = new System.Drawing.Point(26, 37);
+            this.rdoBubbleSort.Name = "rdoBubbleSort";
+            this.rdoBubbleSort.Size = new System.Drawing.Size(116, 25);
+            this.rdoBubbleSort.TabIndex = 0;
+            this.rdoBubbleSort.TabStop = true;
+            this.rdoBubbleSort.Text = "Bubble Sort";
+            this.rdoBubbleSort.UseVisualStyleBackColor = true;
             // 
             // lblPrompt
             // 
@@ -173,6 +173,7 @@
             this.txtNumToFind.Name = "txtNumToFind";
             this.txtNumToFind.Size = new System.Drawing.Size(180, 27);
             this.txtNumToFind.TabIndex = 1;
+            this.txtNumToFind.TextChanged += new System.EventHandler(this.txtNumToFind_TextChanged);
             // 
             // groupBox2
             // 
@@ -206,21 +207,21 @@
             this.lstDisplay.Size = new System.Drawing.Size(981, 298);
             this.lstDisplay.TabIndex = 5;
             // 
-            // label1
+            // lblErrorMsg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 323);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.lblErrorMsg.AutoSize = true;
+            this.lblErrorMsg.Location = new System.Drawing.Point(21, 323);
+            this.lblErrorMsg.Name = "lblErrorMsg";
+            this.lblErrorMsg.Size = new System.Drawing.Size(57, 21);
+            this.lblErrorMsg.TabIndex = 6;
+            this.lblErrorMsg.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 687);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblErrorMsg);
             this.Controls.Add(this.lstDisplay);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -262,7 +263,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lstDisplay;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblErrorMsg;
     }
 }
 
