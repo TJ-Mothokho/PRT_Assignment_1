@@ -28,9 +28,41 @@ namespace PRT_Assignment_1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int[] array = method.Read();
-            lblErrorMsg.Text = method.GetTheNumber(txtNumToFind.Text, lowerNum, maxNum);
-            
+            int[] array = method.Read(); //Fill the array with data in the txt file
+            lblErrorMsg.Text = method.GetTheNumber(txtNumToFind.Text, lowerNum, maxNum); // displays an Error if an invalid number is entered
+
+            if (rdoLinearSearch.Checked) //if the user chooses the Linear Search Algorithm and...
+            {
+                if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
+                {
+
+                }
+                else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
+                {
+
+                }
+                else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
+                {
+
+                }
+            }
+
+            else if (rdoBinarySearch.Checked) //if the user chooses the Binary Search Algorithm and...
+            {
+                if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
+                {
+
+                }
+                else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
+                {
+
+                }
+                else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
+                {
+
+                }
+            }
+
         }
 
         private void txtNumToFind_TextChanged(object sender, EventArgs e)
