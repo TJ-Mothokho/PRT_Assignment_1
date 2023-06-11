@@ -150,6 +150,16 @@ namespace PRT_Assignment_1
 
         }
 
+        private void rdoLinearSearch_CheckedChanged(object sender, EventArgs e)
+        {
+            grbSort.Enabled = false;
+        }
+
+        private void rdoBinarySearch_CheckedChanged(object sender, EventArgs e)
+        {
+            grbSort.Enabled = true;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             lblErrorMsg.Text = "";

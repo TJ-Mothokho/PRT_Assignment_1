@@ -86,6 +86,7 @@
             this.rdoLinearSearch.TabStop = true;
             this.rdoLinearSearch.Text = "Linear Search";
             this.rdoLinearSearch.UseVisualStyleBackColor = true;
+            this.rdoLinearSearch.CheckedChanged += new System.EventHandler(this.rdoLinearSearch_CheckedChanged);
             // 
             // rdoBinarySearch
             // 
@@ -97,6 +98,7 @@
             this.rdoBinarySearch.TabStop = true;
             this.rdoBinarySearch.Text = "Binary Search";
             this.rdoBinarySearch.UseVisualStyleBackColor = true;
+            this.rdoBinarySearch.CheckedChanged += new System.EventHandler(this.rdoBinarySearch_CheckedChanged);
             // 
             // grb1
             // 
