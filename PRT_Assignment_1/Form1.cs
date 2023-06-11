@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,25 +38,15 @@ namespace PRT_Assignment_1
                 int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                 if (index == -1)
                 {
-                    lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                    lstDisplay.Items.Clear();
-                    foreach (var numbers in array)
-                    {
-                        lstDisplay.Items.Add(numbers);
-                    }
+                    NotFound(array);
                 }
                 else if (index != -2)
                 {
-                    lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                    lstDisplay.Items.Clear();
-                    foreach (var numbers in array)
-                    {
-                        lstDisplay.Items.Add(numbers);
-                    }
+                    Found(array, index);
                 }
                 else
                 {
-                    lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                    Invalid(); //if there's an exception error
                 }
             }
 
@@ -66,25 +57,15 @@ namespace PRT_Assignment_1
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        NotFound(array);
                     }
                     else if (index != -2)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        Found(array, index);
                     }
                     else
                     {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                        Invalid();
                     }
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
@@ -92,25 +73,15 @@ namespace PRT_Assignment_1
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        NotFound(array);
                     }
                     else if (index != -2)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        Found(array, index);
                     }
                     else
                     {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                        Invalid();
                     }
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
@@ -118,25 +89,15 @@ namespace PRT_Assignment_1
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        NotFound(array);
                     }
                     else if (index != -2)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
+                        Found(array, index);
                     }
                     else
                     {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                        Invalid();
                     }
                 }
             }
@@ -165,7 +126,28 @@ namespace PRT_Assignment_1
             lblErrorMsg.Text = "";
 
         }
-
+        public void NotFound(int[] array)
+        {
+            lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+            lstDisplay.Items.Clear();
+            foreach (var numbers in array)
+            {
+                lstDisplay.Items.Add(numbers);
+            }
+        }
+        public void Found(int[] array, int index)
+        {
+            lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+            lstDisplay.Items.Clear();
+            foreach (var numbers in array)
+            {
+                lstDisplay.Items.Add(numbers);
+            }
+        }
+        public void Invalid()
+        {
+            lblErrorMsg.Text = "Wrong number entered. Please enter numerical value";
+        }
 
 
     }
