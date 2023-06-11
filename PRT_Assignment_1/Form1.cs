@@ -29,6 +29,7 @@ namespace PRT_Assignment_1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int[] array = method.Read(); //Fill the array with data in the txt file
+            
             lblErrorMsg.Text = method.GetTheNumber(txtNumToFind.Text, lowerNum, maxNum); // displays an Error if an invalid number is entered
 
             if (rdoLinearSearch.Checked) //if the user chooses the Linear Search Algorithm and...
@@ -40,9 +41,13 @@ namespace PRT_Assignment_1
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
                     }
-                    else
+                    else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
                     }
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
@@ -52,9 +57,13 @@ namespace PRT_Assignment_1
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
                     }
-                    else
+                    else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
                     }
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
@@ -64,9 +73,13 @@ namespace PRT_Assignment_1
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
                     }
-                    else
+                    else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
                     }
                 }
             }
@@ -75,15 +88,51 @@ namespace PRT_Assignment_1
             {
                 if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
                 {
-
+                    int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else if (index != -2)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                    }
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
                 {
-
+                    int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else if (index != -2)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                    }
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
                 {
-
+                    int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                    if (index == -1)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    }
+                    else if (index != -2)
+                    {
+                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                    }
                 }
             }
 
@@ -99,6 +148,8 @@ namespace PRT_Assignment_1
             lblErrorMsg.Text = "";
 
         }
+
+
 
     }
 }

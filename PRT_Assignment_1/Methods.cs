@@ -58,18 +58,69 @@ namespace PRT_Assignment_1
 
         public int LinearSearch(int[] arrayNumber, string numToFind) //Linear Search Algorithm
         {
-            int numberToFind = int.Parse(numToFind);
-            int indexFound = -1;
-            for (int i = 0; i < arrayNumber.Length; i++)
+            try
             {
-                if (numberToFind == arrayNumber[i])
+                int numberToFind = int.Parse(numToFind);
+
+
+                int indexFound = -1;
+                for (int i = 0; i < arrayNumber.Length; i++)
                 {
-                    indexFound = i;//sets indexfound to whatever index number the value was in
-                    i = arrayNumber.Length;// setting i to the max value so we can leave the loop
+                    if (numberToFind == arrayNumber[i])
+                    {
+                        indexFound = i;//sets indexfound to whatever index number the value was in
+                        i = arrayNumber.Length;// setting i to the max value so we can leave the loop
+                    }
                 }
+                return indexFound;
+            }
+            catch(SystemException ex)
+            {
+                return -2;
             }
 
-            return indexFound;
+            
+        }
+
+        public int BinarySearch(int[] array, string numToFind)
+        {
+            try
+            {
+                int number = int.Parse(numToFind);
+                int first, last, middle = 0;
+                bool valid;
+                int index;
+                first = 0;
+                last = array.Length - 1;
+                valid = false;
+                while (valid == false && first <= last)
+                {
+                    middle = (first + last) / 2;
+                    if (number == array[middle])
+                    {
+                        valid = true;
+                    }
+                    else
+                    {
+
+                        if (number > array[middle])
+                            first = middle + 1;
+                        else
+                            last = middle - 1;
+                    }
+
+                }
+                if (valid == true)
+                    index = middle;
+                else
+                    index = -1;
+                return index;
+            }
+            catch (SystemException ex)
+            {
+                return -2;
+            }
+
         }
     }
 }
