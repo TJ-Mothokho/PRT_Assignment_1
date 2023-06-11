@@ -200,6 +200,8 @@
             // 
             // lstDisplay
             // 
+            this.lstDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstDisplay.FormattingEnabled = true;
             this.lstDisplay.ItemHeight = 21;
             this.lstDisplay.Location = new System.Drawing.Point(21, 360);

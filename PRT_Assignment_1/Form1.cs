@@ -40,10 +40,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -56,10 +66,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -72,10 +92,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -92,10 +122,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -108,10 +148,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -124,10 +174,20 @@ namespace PRT_Assignment_1
                     if (index == -1)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else if (index != -2)
                     {
                         lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                        lstDisplay.Items.Clear();
+                        foreach (var numbers in array)
+                        {
+                            lstDisplay.Items.Add(numbers);
+                        }
                     }
                     else
                     {
@@ -135,6 +195,8 @@ namespace PRT_Assignment_1
                     }
                 }
             }
+
+            
 
         }
 
