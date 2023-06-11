@@ -33,7 +33,7 @@
             this.rdoLinearSearch = new System.Windows.Forms.RadioButton();
             this.rdoBinarySearch = new System.Windows.Forms.RadioButton();
             this.grb1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbSort = new System.Windows.Forms.GroupBox();
             this.rdoQuickSort = new System.Windows.Forms.RadioButton();
             this.rdoInsertionSort = new System.Windows.Forms.RadioButton();
             this.rdoBubbleSort = new System.Windows.Forms.RadioButton();
@@ -45,7 +45,7 @@
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grb1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grbSort.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,19 +111,19 @@
             this.grb1.TabStop = false;
             this.grb1.Text = "Which Search Algorithm do you want to use?";
             // 
-            // groupBox1
+            // grbSort
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.rdoQuickSort);
-            this.groupBox1.Controls.Add(this.rdoInsertionSort);
-            this.groupBox1.Controls.Add(this.rdoBubbleSort);
-            this.groupBox1.Location = new System.Drawing.Point(21, 174);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(981, 78);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Which Sort Algorithm do you want to use?";
+            this.grbSort.Controls.Add(this.rdoQuickSort);
+            this.grbSort.Controls.Add(this.rdoInsertionSort);
+            this.grbSort.Controls.Add(this.rdoBubbleSort);
+            this.grbSort.Location = new System.Drawing.Point(21, 174);
+            this.grbSort.Name = "grbSort";
+            this.grbSort.Size = new System.Drawing.Size(981, 78);
+            this.grbSort.TabIndex = 3;
+            this.grbSort.TabStop = false;
+            this.grbSort.Text = "Which Sort Algorithm do you want to use?";
             // 
             // rdoQuickSort
             // 
@@ -226,7 +226,7 @@
             this.Controls.Add(this.lblErrorMsg);
             this.Controls.Add(this.lstDisplay);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbSort);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,8 +240,8 @@
             this.panel1.PerformLayout();
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbSort.ResumeLayout(false);
+            this.grbSort.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -256,7 +256,7 @@
         private System.Windows.Forms.RadioButton rdoLinearSearch;
         private System.Windows.Forms.RadioButton rdoBinarySearch;
         private System.Windows.Forms.GroupBox grb1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbSort;
         private System.Windows.Forms.RadioButton rdoQuickSort;
         private System.Windows.Forms.RadioButton rdoInsertionSort;
         private System.Windows.Forms.RadioButton rdoBubbleSort;

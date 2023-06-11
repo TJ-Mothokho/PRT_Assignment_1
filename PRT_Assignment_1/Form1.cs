@@ -34,83 +34,28 @@ namespace PRT_Assignment_1
 
             if (rdoLinearSearch.Checked) //if the user chooses the Linear Search Algorithm and...
             {
-                if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
+                int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
+                if (index == -1)
                 {
-                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
+                    lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
+                    lstDisplay.Items.Clear();
+                    foreach (var numbers in array)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else if (index != -2)
-                    {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else
-                    {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                        lstDisplay.Items.Add(numbers);
                     }
                 }
-                else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
+                else if (index != -2)
                 {
-                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
+                    lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                    lstDisplay.Items.Clear();
+                    foreach (var numbers in array)
                     {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else if (index != -2)
-                    {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else
-                    {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
+                        lstDisplay.Items.Add(numbers);
                     }
                 }
-                else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
+                else
                 {
-                    int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
-                    {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else if (index != -2)
-                    {
-                        lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-                        lstDisplay.Items.Clear();
-                        foreach (var numbers in array)
-                        {
-                            lstDisplay.Items.Add(numbers);
-                        }
-                    }
-                    else
-                    {
-                        lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
-                    }
+                    lblErrorMsg.Text = "Wrong number entered. Please enter numerical value"; //if there's an exception error
                 }
             }
 
