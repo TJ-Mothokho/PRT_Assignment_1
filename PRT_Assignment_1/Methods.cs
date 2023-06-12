@@ -124,6 +124,61 @@ namespace PRT_Assignment_1
 
             
         }
-        
+        public void BubbleSort(int[] arrayNumber)
+        {
+            int n = arrayNumber.Length;
+            bool swapped;
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                swapped = false;
+
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (arrayNumber[j] > arrayNumber[j + 1])
+                    {
+                        Swap(arrayNumber, j, j + 1);
+                        swapped = true;
+                    }
+                }
+
+                if (!swapped)
+                {
+                    break;
+                }
+            }
+        }
+        public void QuickSort(int[] arrayNumber, int leftNumber, int rightNumber)
+        {
+            if (leftNumber < rightNumber)
+            {
+                int pivotIndex = Partition(arrayNumber, leftNumber, rightNumber);
+                QuickSort(arrayNumber, leftNumber, pivotIndex - 1);
+                QuickSort(arrayNumber, pivotIndex + 1, rightNumber);
+            }
+        }
+        public int Partition(int[] arrayNumber, int leftNumber, int rightNumber)
+        {
+            int pivot = arrayNumber[rightNumber];
+            int i = leftNumber - 1;
+
+            for (int j = leftNumber; j < rightNumber; j++)
+            {
+                if (arrayNumber[j] <= pivot)
+                {
+                    i++;
+                    Swap(arrayNumber, i, j);
+                }
+            }
+
+            Swap(arrayNumber, i + 1, rightNumber);
+            return i + 1;
+        }
+        public void Swap(int[] arrayNumber, int i, int j)
+        {
+            int temp = arrayNumber[i];
+            arrayNumber[i] = arrayNumber[j];
+            arrayNumber[j] = temp;
+        }
     }
 }
