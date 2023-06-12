@@ -74,7 +74,7 @@ namespace PRT_Assignment_1
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
                 {
                     //Insertion Sort Method should start at line 77
-
+                    method.InsertionSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)

@@ -180,5 +180,26 @@ namespace PRT_Assignment_1
             arrayNumber[i] = arrayNumber[j];
             arrayNumber[j] = temp;
         }
+
+        public void InsertionSort(int[] array)
+        {
+            int n = array.Length;
+
+            //Iterate over the array starting from the second element
+            for (int i=1; i<n ;i++)
+            {
+                int key = array[i];
+                int j = i - 1;
+
+                //Move elements of array[0...i-1], that are greater than the key, to one position ahead of their currrent position
+                while (j >= 0 && array[j] > key)
+                {
+                    array[j+1] = array[j];
+                    j = j - 1;
+                }
+
+                array[j + 1] = key; //Insert the key at the correct position in the sorted part
+            }
+        }
     }
 }
