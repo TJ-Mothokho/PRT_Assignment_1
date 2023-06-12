@@ -55,7 +55,7 @@ namespace PRT_Assignment_1
                 if (rdoBubbleSort.Checked)//...Bubble Sort Algorithm is also chosen
                 {
                     //Bubble Sort Method should start at line 58
-
+                    method.BubbleSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)
@@ -93,7 +93,7 @@ namespace PRT_Assignment_1
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
                 {
                     //Quick Sort Method should start at line 96
-
+                    method.QuickSort(array, 0, array.Length - 1);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
                     if (index == -1)
