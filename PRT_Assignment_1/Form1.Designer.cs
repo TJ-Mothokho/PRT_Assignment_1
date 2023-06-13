@@ -43,6 +43,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lstDisplay = new System.Windows.Forms.ListBox();
             this.lblErrorMsg = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grb1.SuspendLayout();
             this.grbSort.SuspendLayout();
@@ -208,7 +209,7 @@
             this.lstDisplay.ItemHeight = 21;
             this.lstDisplay.Location = new System.Drawing.Point(21, 360);
             this.lstDisplay.Name = "lstDisplay";
-            this.lstDisplay.Size = new System.Drawing.Size(981, 298);
+            this.lstDisplay.Size = new System.Drawing.Size(693, 298);
             this.lstDisplay.TabIndex = 5;
             // 
             // lblErrorMsg
@@ -220,11 +221,23 @@
             this.lblErrorMsg.TabIndex = 6;
             this.lblErrorMsg.Text = "label1";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(720, 360);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 105);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Group Members:\r\n\r\ns225258358 Tshiamo Mothokho\r\ns225866161 Odwa Sithonga\r\ns2250650" +
+    "02 Brilliant Motjiang";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 687);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblErrorMsg);
             this.Controls.Add(this.lstDisplay);
             this.Controls.Add(this.groupBox2);
@@ -268,6 +281,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lstDisplay;
         private System.Windows.Forms.Label lblErrorMsg;
+        private System.Windows.Forms.Label label1;
     }
 }
 

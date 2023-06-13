@@ -11,9 +11,14 @@ using System.Windows.Forms;
 
 namespace PRT_Assignment_1
 {
+    //Group members:
+    //s225258358 Tshiamo Mothokho
+    //s225866161 Odwa Sithonga
+    //s225065002 Brilliant Motjiang
+
     public partial class Form1 : Form
     {
-        Methods method = new Methods();
+        Methods method = new Methods();//create a methods object
         int lowerNum = 1, maxNum = 102;
         
         public Form1()
@@ -68,7 +73,7 @@ namespace PRT_Assignment_1
                     }
                     else
                     {
-                        Invalid();
+                        Invalid();//if there's an exception error
                     }
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
@@ -87,7 +92,7 @@ namespace PRT_Assignment_1
                     }
                     else
                     {
-                        Invalid();
+                        Invalid(); //if there's an exception error
                     }
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
@@ -106,7 +111,7 @@ namespace PRT_Assignment_1
                     }
                     else
                     {
-                        Invalid();
+                        Invalid(); //if there's an exception error
                     }
                 }
             }
@@ -122,7 +127,7 @@ namespace PRT_Assignment_1
 
         private void rdoLinearSearch_CheckedChanged(object sender, EventArgs e)
         {
-            grbSort.Enabled = false;
+            grbSort.Enabled = false; //Disable the ability to choose the Sort Algorithm if the user chooses Linear Search
         }
 
         private void rdoBinarySearch_CheckedChanged(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace PRT_Assignment_1
             lblErrorMsg.Text = "";
 
         }
-        public void NotFound(int[] array)
+        public void NotFound(int[] array) //If the number is not found in the array
         {
             lblErrorMsg.Text = $"The number {txtNumToFind.Text} was not found in the following array: ";
             lstDisplay.Items.Clear();
@@ -144,7 +149,7 @@ namespace PRT_Assignment_1
                 lstDisplay.Items.Add(numbers);
             }
         }
-        public void Found(int[] array, int index)
+        public void Found(int[] array, int index)//If the number is found in the array
         {
             lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
             lstDisplay.Items.Clear();
@@ -153,7 +158,7 @@ namespace PRT_Assignment_1
                 lstDisplay.Items.Add(numbers);
             }
         }
-        public void Invalid()
+        public void Invalid() //if there's an exception error
         {
             lblErrorMsg.Text = "Wrong number entered. Please enter numerical value";
         }
