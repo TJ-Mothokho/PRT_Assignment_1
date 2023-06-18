@@ -151,6 +151,17 @@ namespace PRT_Assignment_1
         }
         public void Found(int[] array, int index)//If the number is found in the array
         {
+           if (rdoBinarySearch.Checked)
+            {
+                lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Binary Search in the following array: ";
+                lstDisplay.Items.Clear();
+                foreach (var numbers in array)
+                {
+                    lstDisplay.Items.Add(numbers);
+                }
+            }
+           else if (rdoLinearSearch.Checked)
+            {
             lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
             lstDisplay.Items.Clear();
             foreach (var numbers in array)
