@@ -41,7 +41,7 @@ namespace PRT_Assignment_1
             if (rdoLinearSearch.Checked) //if the user chooses the Linear Search Algorithm and...
             {
                 int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                Results(array, index);
+                Results(array, index);//for printing purposes
 
 
             }
@@ -54,7 +54,7 @@ namespace PRT_Assignment_1
                     method.BubbleSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    Results(array, index);
+                    Results(array, index);//for printing purposes
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
                 {
@@ -62,7 +62,7 @@ namespace PRT_Assignment_1
                     method.InsertionSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    Results(array, index);
+                    Results(array, index);//for printing purposes
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
                 {
@@ -70,7 +70,7 @@ namespace PRT_Assignment_1
                     method.QuickSort(array, 0, array.Length - 1);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    Results(array, index);
+                    Results(array, index);//for printing purposes
                 }
             }
 
@@ -78,9 +78,9 @@ namespace PRT_Assignment_1
 
         }
 
-        private void txtNumToFind_TextChanged(object sender, EventArgs e)
+        private void txtNumToFind_TextChanged(object sender, EventArgs e)//ignore
         {
-
+            //ignore
         }
 
         private void rdoLinearSearch_CheckedChanged(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace PRT_Assignment_1
 
         private void rdoBinarySearch_CheckedChanged(object sender, EventArgs e)
         {
-            grbSort.Enabled = true;
+            grbSort.Enabled = true;//enable the groupbox for Sort Algorithm if Binary Search Algorithm is selected
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace PRT_Assignment_1
             lstDisplay.Items.Clear();
             foreach (var numbers in array)
             {
-                lstDisplay.Items.Add(numbers);
+                lstDisplay.Items.Add(numbers);//prints the array in the list box
             }
         }
         public void Found(int[] array, int index)//If the number is found in the array
@@ -115,7 +115,7 @@ namespace PRT_Assignment_1
                 lstDisplay.Items.Clear();
                 foreach (var numbers in array)
                 {
-                    lstDisplay.Items.Add(numbers);
+                    lstDisplay.Items.Add(numbers);//prints the array in the list box
                 }
             }
            else if (rdoLinearSearch.Checked)
@@ -132,10 +132,10 @@ namespace PRT_Assignment_1
         {
             lblErrorMsg.Text = "Wrong number entered. Please enter numerical value";
         }
-public void Result(int[] array, int index)
-{
+        public void Results(int[] array, int index)
+        {
       
-if (index == -1)
+                if (index == -1)
                 {
                     NotFound(array);
                 }
