@@ -41,18 +41,9 @@ namespace PRT_Assignment_1
             if (rdoLinearSearch.Checked) //if the user chooses the Linear Search Algorithm and...
             {
                 int index = method.LinearSearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                if (index == -1)
-                {
-                    NotFound(array);
-                }
-                else if (index != -2)
-                {
-                    Found(array, index);
-                }
-                else
-                {
-                    Invalid(); //if there's an exception error
-                }
+                Results(array, index);
+
+
             }
 
             else if (rdoBinarySearch.Checked) //if the user chooses the Binary Search Algorithm and...
@@ -63,18 +54,7 @@ namespace PRT_Assignment_1
                     method.BubbleSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
-                    {
-                        NotFound(array);
-                    }
-                    else if (index != -2)
-                    {
-                        Found(array, index);
-                    }
-                    else
-                    {
-                        Invalid();//if there's an exception error
-                    }
+                    Results(array, index);
                 }
                 else if (rdoInsertionSort.Checked)//...Insertion Sort Algorithm is also chosen
                 {
@@ -82,18 +62,7 @@ namespace PRT_Assignment_1
                     method.InsertionSort(array);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
-                    {
-                        NotFound(array);
-                    }
-                    else if (index != -2)
-                    {
-                        Found(array, index);
-                    }
-                    else
-                    {
-                        Invalid(); //if there's an exception error
-                    }
+                    Results(array, index);
                 }
                 else if (rdoQuickSort.Checked)//... Quick Sort Algorithm is also chosen
                 {
@@ -101,18 +70,7 @@ namespace PRT_Assignment_1
                     method.QuickSort(array, 0, array.Length - 1);
 
                     int index = method.BinarySearch(array, txtNumToFind.Text);//Search for the number using Linear Search Algorithm and return an index
-                    if (index == -1)
-                    {
-                        NotFound(array);
-                    }
-                    else if (index != -2)
-                    {
-                        Found(array, index);
-                    }
-                    else
-                    {
-                        Invalid(); //if there's an exception error
-                    }
+                    Results(array, index);
                 }
             }
 
@@ -174,6 +132,22 @@ namespace PRT_Assignment_1
         {
             lblErrorMsg.Text = "Wrong number entered. Please enter numerical value";
         }
+public void Result(int[] array, int index)
+{
+      
+if (index == -1)
+                {
+                    NotFound(array);
+                }
+                else if (index != -2)
+                {
+                    Found(array, index);
+                }
+                else
+                {
+                    Invalid(); //if there's an exception error
+                }
+}
 
 
     }
