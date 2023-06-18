@@ -162,11 +162,12 @@ namespace PRT_Assignment_1
             }
            else if (rdoLinearSearch.Checked)
             {
-            lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
-            lstDisplay.Items.Clear();
-            foreach (var numbers in array)
-            {
-                lstDisplay.Items.Add(numbers);
+                lblErrorMsg.Text = $"The number {txtNumToFind.Text} was found at index {index} of Linear Search in the following array: ";
+                lstDisplay.Items.Clear();
+                foreach (var numbers in array)
+                {
+                    lstDisplay.Items.Add(numbers);
+                }
             }
         }
         public void Invalid() //if there's an exception error
